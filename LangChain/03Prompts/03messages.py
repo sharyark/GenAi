@@ -23,3 +23,33 @@ result = model.invoke(messages)
 messages.append(AIMessage(content=result.content))
 
 print(messages)
+
+
+# here are simple gpt generated coce of same concept
+
+# from langchain.chat_models import ChatOpenAI
+# from langchain.schema import SystemMessage, HumanMessage, AIMessage
+
+# # Initialize the chatbot model
+# chat_model = ChatOpenAI()
+
+# def chat_with_bot(user_message: str, chat_history: list):
+#     messages = [SystemMessage(content="You are a helpful chatbot.")]
+#     messages.extend(chat_history)
+#     messages.append(HumanMessage(content=user_message))
+    
+#     response = chat_model.predict_messages(messages)
+#     chat_history.append(HumanMessage(content=user_message))
+#     chat_history.append(AIMessage(content=response.content))
+    
+#     return response.content
+
+# # Example usage
+# if __name__ == "__main__":
+#     chat_history = []
+#     while True:
+#         user_message = input("You: ")
+#         if user_message.lower() in ["exit", "quit"]:
+#             break
+#         response = chat_with_bot(user_message, chat_history)
+#         print(f"Chatbot: {response}")
